@@ -286,7 +286,7 @@ footer div{
     }
     .buscador{ width: 330px; }
 
-    header nav ul{ background-color: rgb(37, 72, 167); }
+    header nav ul{ background-color: green; }
     
     header nav ul{
         flex-direction: column;
