@@ -1,0 +1,318 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+body{
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+}
+
+.grilla-total{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+/*-------------------------------HEADER-------------------------------------------------------*/
+header{ grid-area: header; }
+
+.headFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(65, 36, 170);
+    font-size: large;
+    letter-spacing: 2px;
+    flex-wrap: nowrap;
+}
+.headFlex div{ margin: 0px 15px; }
+
+header input{color: black;}
+
+.buscador{
+    width: 380px;
+    height: 30px;
+    border: solid 2px rgb(77, 20, 131);
+    border-radius: 10px;
+}
+.boton{
+    color: black;
+    width: 80px;
+    height: 25px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+nav ul{
+    background-color: blueviolet;
+    border: solid 3px black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+nav li{ margin: 15px 0px; }
+
+nav ul li a:hover{ background-color: black; }
+
+header img{ width: 100%; }
+
+/*----------------------------------------/HEADER---------------------------------------------*/
+
+/*---------------------------------------MAIN----------------------------------------------*/
+.grilla-main{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-row: repeat(4, auto);
+    grid-template-areas: 
+    "ofertas ofertas"
+    "marcas clientes"
+    "marcas clientes"
+    "marcas clientes";
+    gap: 10px;
+}
+
+main{ grid-area: main; }
+
+.ofertas{ grid-area: ofertas; }
+
+.ofertas h2{
+    text-align: center;
+    padding: 15px;
+}
+
+.comprar{
+    background-color:white;
+    position: relative;
+    width: 270px;
+    height: 392px;
+    margin: 20px;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+.comprar h3{
+    font-size: large;
+    color: black;
+    margin: 10px;
+}
+.comprar p{
+    color: black;
+    font-size: x-large;
+}
+.comprar img{
+    width: 200px;
+    height: 250px;
+}
+
+.descuento{
+    background-color: rgb(228, 65, 15);
+    width: 90px;
+    height: 90px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 35px;
+    position: absolute;
+    top: 0;
+}
+.descuento h4{ padding-top: 35px; }
+
+.botonCompra{
+    background-color: rgb(2, 63, 2);
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: solid 3px black;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.ofertasFlex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.marcas{
+    grid-area: marcas;
+    text-align: center;
+}
+.marcas h2{ margin: 20px; }
+
+.grilla-marcas{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(4, 40vh);
+    align-items: center;
+}
+
+.grilla-marcas div img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.clientes{
+    grid-area: clientes;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    border: dashed black 1px;
+}
+.clientes h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.clientes div{ width: auto;}
+
+.clientes div h4{ padding: 20px; }
+
+.clientes div picture img{
+    border: solid 2px;
+    border-color: rgb(89, 25, 150);
+    border-radius: 30px;
+}
+
+/* -----------------------------------------------------MASCOTAS */
+.mascotas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mascotas div{
+    margin: 50px;
+    text-align: center;
+}
+.mascotas h2{ padding: 20px 0px; }
+
+/* ----------------------------------------------------SERVICIOS */
+.servicios{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.servicios li{ margin: 15px; }
+
+.imgSer{
+    width: 320px;
+    height: 300px;
+    padding: 20px;
+}
+.pSer{
+    padding: 10px;
+    line-height: 25px;
+}
+
+.hover:hover{ background-color: black; }
+
+.colum{
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------------------------------------------NOSOTROS */
+.nosotros h2{
+    color: rgb(189, 186, 186);
+    padding: 20px;
+}
+
+.nosotros picture img{
+    width: 700px;
+    height: 350px;
+}
+
+.nosotros{ text-align: center; }
+
+/* -------------------------------------------------------CONTACTO */
+.contacto div{
+    margin: auto;
+    text-align: center;
+    width: 350px;
+}
+.contacto form input, textarea{
+    padding: 4px;
+    margin: 5px;
+    color:black;
+} 
+/*-------------------------------------------/MAIN---------------------------------------*/
+
+/*----------------------------------------FOTER-------------------------------*/
+footer{
+    background-color: blueviolet;
+    grid-area: footer;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+footer div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+/*-------------------------------/FOOTER-----------------------------------------------*/
+
+/* TABLET */
+@media (max-width: 1024px){
+    header nav ul{
+        background-color: lightcoral;
+        justify-content: space-between;
+    }
+
+    .grilla-main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "ofertas"
+        "marcas"
+        "clientes";
+    }
+
+}
+/* PHONE */
+@media (max-width: 768px){
+    .headFlex{
+        flex-direction: column;
+        text-align: center;
+    }
+    .buscador{ width: 330px; }
+
+    header nav ul{ background-color: rgb(37, 72, 167); }
+    
+    header nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li{ font-size: 20px; }
+
+    .grilla-marcas{
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "marcas marcas"
+        "marcas marcas"
+        "marcas marcas"
+        "marcas marcas"
+        "marcas marcas";
+    }
+    .grilla-marcas div{ margin: 10px; }
+
+    .colum{ text-align: center }
+
+    iframe{ margin: 15px; }
+
+    .nosotros picture img{
+        padding: 20px;
+        width: 80%;
+        height: 50%;
+    }
+}
