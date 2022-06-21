@@ -5,7 +5,14 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: whitesmoke;
+    font-size: 14px;
 }
+/*Por bootstrap*/
+a{                      
+    color: beige;
+    text-decoration: none;
+}
+
 body{
     background-image: url("../img/fondo.jpg");
     background-size: cover;
@@ -57,10 +64,17 @@ nav ul{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 100%;
 }
-nav li{ margin: 15px 0px; }
+nav li{
+    margin: 15px 0px;
+    color: blanchedalmond;
+}
 
-nav ul li a:hover{ background-color: black; }
+/*Por bootstrap*/
+nav ul li a:hover{ 
+    background-color: rgb(190, 125, 250);
+}
 
 header img{ width: 100%; }
 
@@ -126,7 +140,10 @@ main{ grid-area: main; }
     position: absolute;
     top: 0;
 }
-.descuento h4{ padding-top: 35px; }
+.descuento h4{
+    padding-top: 35px; 
+    font-size:medium;
+}
 
 .botonCompra{
     background-color: rgb(2, 63, 2);
@@ -135,7 +152,6 @@ main{ grid-area: main; }
     height: 35px;
     border: solid 3px black;
     border-radius: 20px;
-    margin-top: 15px;
     transition: 0.2s;
 }
 .botonCompra:hover{
@@ -254,16 +270,16 @@ main{ grid-area: main; }
 .nosotros{ text-align: center; }
 
 /* -------------------------------------------------------CONTACTO */
-.contacto div{
+form{
+    width: 350px;
     margin: auto;
     text-align: center;
-    width: 350px;
 }
-.contacto form input, textarea{
-    padding: 4px;
-    margin: 5px;
-    color:black;
-} 
+
+.row{
+    display: flex;
+    justify-content: center;
+}
 /*-------------------------------------------/MAIN---------------------------------------*/
 
 /*----------------------------------------FOTER-------------------------------*/
@@ -284,7 +300,7 @@ footer div{
 /* TABLET */
 @media (max-width: 1024px){
     header nav ul{
-        background-color: lightcoral;
+        background-color: rgb(228, 65, 15);
         justify-content: space-between;
     }
 
@@ -306,7 +322,7 @@ footer div{
     }
     .buscador{ width: 330px; }
 
-    header nav ul{ background-color: green; }
+    header nav ul{ background-color: rgb(167, 1, 158); }
     
     header nav ul{
         flex-direction: column;
@@ -325,8 +341,6 @@ footer div{
         "marcas marcas";
     }
     .grilla-marcas div{ margin: 10px; }
-
-    .colum{ text-align: center }
 
     iframe{ margin: 15px; }
 
