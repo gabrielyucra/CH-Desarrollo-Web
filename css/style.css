@@ -1,0 +1,356 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+/*Por bootstrap*/
+a {
+  color: beige;
+  text-decoration: none;
+}
+
+.grilla-total {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+
+/*-------------------------------HEADER-------------------------------------------------------*/
+header {
+  grid-area: header;
+}
+header input {
+  color: black;
+}
+header img {
+  width: 100%;
+}
+
+.headFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(65, 36, 170);
+  font-size: large;
+  letter-spacing: 2px;
+  flex-wrap: nowrap;
+}
+.headFlex div {
+  margin: 0px 15px;
+}
+@media (max-width: 768px) {
+  .headFlex {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+.buscador {
+  width: 380px;
+  height: 30px;
+  border: solid 2px rgb(77, 20, 131);
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .buscador {
+    width: 330px;
+  }
+}
+
+.boton {
+  color: black;
+  width: 80px;
+  height: 25px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+nav ul {
+  background-color: blueviolet;
+  border: solid 3px black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  nav ul {
+    background-color: rgb(228, 15, 210);
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    background-color: rgb(167, 1, 158);
+  }
+}
+nav ul li {
+  margin: 15px 0px;
+  color: blanchedalmond;
+}
+nav ul li:hover {
+  background-color: rgb(190, 125, 250);
+}
+
+/*----------------------------------------/HEADER---------------------------------------------*/
+body {
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+}
+
+/*----------------------------------------FOTER-------------------------------*/
+footer {
+  background-color: blueviolet;
+  grid-area: footer;
+  text-align: center;
+  padding: 5px;
+  color: black;
+}
+footer div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+/*-------------------------------/FOOTER-----------------------------------------------*/
+/*---------------------------------------MAIN----------------------------------------------*/
+.grilla-main {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-row: repeat(4, auto);
+  grid-template-areas: "ofertas ofertas" "marcas clientes" "marcas clientes" "marcas clientes";
+  gap: 10px;
+}
+@media (max-width: 1024px) {
+  .grilla-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "ofertas" "marcas" "clientes";
+  }
+}
+
+main {
+  grid-area: main;
+}
+
+.ofertas {
+  grid-area: ofertas;
+}
+.ofertas h2 {
+  text-align: center;
+  padding: 15px;
+}
+.ofertas .ofertasFlex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.ofertas .ofertasFlex .comprar {
+  background-color: white;
+  position: relative;
+  width: 270px;
+  height: 392px;
+  margin: 20px;
+  text-align: center;
+  border: solid 2px black;
+  border-radius: 15px;
+}
+.ofertas .ofertasFlex .comprar h3 {
+  font-size: large;
+  color: black;
+  margin: 10px;
+}
+.ofertas .ofertasFlex .comprar img {
+  transition: all 0.3s;
+  width: 200px;
+  height: 250px;
+}
+.ofertas .ofertasFlex .comprar img:hover {
+  transform: scale(1.1);
+}
+.ofertas .ofertasFlex .comprar .descuento {
+  background-color: rgb(228, 65, 15);
+  width: 90px;
+  height: 90px;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 35px;
+  position: absolute;
+  top: 0;
+}
+.ofertas .ofertasFlex .comprar .descuento h4 {
+  padding-top: 35px;
+  font-size: medium;
+}
+.ofertas .ofertasFlex .comprar p {
+  color: black;
+  font-size: x-large;
+}
+.ofertas .ofertasFlex .comprar .botonCompra {
+  background-color: rgb(2, 63, 2);
+  color: white;
+  width: 200px;
+  height: 35px;
+  border: solid 3px black;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.ofertas .ofertasFlex .comprar .botonCompra:hover {
+  transform: scale(1.1);
+  background-color: rgb(13, 128, 3);
+}
+
+.marcas {
+  grid-area: marcas;
+  text-align: center;
+}
+.marcas h2 {
+  margin: 20px;
+}
+.marcas .grilla-marcas {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(4, 40vh);
+  align-items: center;
+}
+.marcas .grilla-marcas div img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.marcas .grilla-marcas div img .rotate:hover {
+  -webkit-animation: marcas 1.1s;
+          animation: marcas 1.1s;
+}
+@media (max-width: 768px) {
+  .marcas .grilla-marcas {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas";
+  }
+  .marcas .grilla-marcas div {
+    margin: 10px;
+  }
+}
+
+@-webkit-keyframes marcas {
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes marcas {
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+.clientes {
+  grid-area: clientes;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border: dashed black 1px;
+}
+.clientes h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.clientes div {
+  width: auto;
+}
+.clientes div h4 {
+  padding: 20px;
+}
+.clientes div img {
+  border: solid 2px;
+  border-color: rgb(89, 25, 150);
+  border-radius: 30px;
+}
+
+/* -----------------------------------------------------MASCOTAS */
+.mascotas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mascotas div {
+  margin: 50px;
+  text-align: center;
+}
+.mascotas h2 {
+  padding: 20px 0px;
+}
+
+/* ----------------------------------------------------SERVICIOS */
+.colum {
+  display: flex;
+  flex-direction: column;
+}
+.colum .servicios {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.colum .servicios li {
+  margin: 15px;
+}
+.colum .imgSer {
+  width: 320px;
+  height: 300px;
+  padding: 20px;
+}
+.colum .pSer {
+  padding: 10px;
+  line-height: 25px;
+}
+.colum .hover:hover {
+  background-color: black;
+}
+
+/* -----------------------------------------------------NOSOTROS */
+.nosotros {
+  text-align: center;
+}
+.nosotros iframe {
+  margin: 10px;
+}
+
+.card {
+  text-align: center;
+  margin: 15px auto;
+}
+.card img {
+  width: 95%;
+  margin: 10px auto;
+}
+
+/* -------------------------------------------------------CONTACTO */
+form {
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+form .row {
+  display: flex;
+  justify-content: center;
+}
+
+/*-------------------------------------------/MAIN---------------------------------------*//*# sourceMappingURL=style.css.map */
