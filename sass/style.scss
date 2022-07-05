@@ -1,4 +1,6 @@
-@import "generales";
+@import "./base/variables";
+@import "./partials/generales";
+@import "./base/mapas";
 
 /*---------------------------------------MAIN----------------------------------------------*/
 .grilla-main{
@@ -12,14 +14,13 @@
     "marcas clientes";
     gap: 10px;
 
-    @media (max-width: 1024px){
+    @media (max-width: $desktop){
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
         "ofertas"
         "marcas"
         "clientes";
-
     }
 }
 
@@ -32,9 +33,8 @@ main{ grid-area: main; }
         padding: 15px;
     }  
     .ofertasFlex{
-        display: flex;
+        @include flex();
         justify-content: space-evenly;
-        flex-wrap: wrap;
         .comprar{
             background-color:white;
             position: relative;
@@ -59,7 +59,7 @@ main{ grid-area: main; }
                 }
             }
             .descuento{
-                background-color: rgb(228, 65, 15);
+                background-color: (map-get($colores, "colorOferta"));
                 width: 90px;
                 height: 90px;
                 border-top-right-radius: 45px;
@@ -78,11 +78,10 @@ main{ grid-area: main; }
                 font-size: x-large;
             }
             .botonCompra{
+                @extend .boton-basico;
                 background-color: rgb(2, 63, 2);
                 color: white;
                 width: 200px;
-                height: 35px;
-                border: solid 3px black;
                 border-radius: 20px;
                 transition: 0.2s;
                 &:hover{
@@ -113,7 +112,16 @@ main{ grid-area: main; }
                 height: 150px;
                 border-radius: 50%;
                 .rotate:hover{ animation: marcas 1.1s; }
-            }
+            
+            @keyframes marcas{
+                25%{
+                    transform: rotate(-20deg);
+                }
+                75%{
+                    transform: rotate(20deg);
+                }
+            } 
+        }
         }
     @media (max-width:$phone){
         grid-template-rows: repeat(5, auto);
@@ -130,14 +138,7 @@ main{ grid-area: main; }
         }
     }
 }
-@keyframes marcas{
-    25%{
-        transform: rotate(-20deg);
-    }
-    75%{
-        transform: rotate(20deg);
-    }
-} 
+
 
 .clientes{
     grid-area: clientes;
@@ -207,24 +208,33 @@ main{ grid-area: main; }
     text-align: center;
     iframe{
         margin: 10px;
+        width: 80%;
     }
 }
 .card{
-    text-align: center;
     margin: 15px auto;
+    h5{
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
     img{
-        width: 95%;
         margin: 10px auto;
+    }
+    p{
+        text-align: center;
     }
 }
 /* -------------------------------------------------------CONTACTO */
-form{
+.form-container{
+
+    form{
     width: 350px;
-    margin: auto;
+    margin: 10px auto;
     text-align: center;
     .row{
         display: flex;
         justify-content: center;
     }
+}
 }
 /*-------------------------------------------/MAIN---------------------------------------*/

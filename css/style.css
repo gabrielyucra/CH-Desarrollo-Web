@@ -1,3 +1,10 @@
+.boton-basico, .ofertas .ofertasFlex .comprar .botonCompra, .boton {
+  font-size: 20px;
+  text-align: center;
+  height: 35px;
+  border: solid 2px black;
+}
+
 * {
   list-style: none;
   text-decoration: none;
@@ -5,7 +12,7 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: whitesmoke;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /*Por bootstrap*/
@@ -34,13 +41,14 @@ header img {
 
 .headFlex {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: rgb(65, 36, 170);
   font-size: large;
   letter-spacing: 2px;
-  flex-wrap: nowrap;
 }
 .headFlex div {
   margin: 0px 15px;
@@ -67,17 +75,16 @@ header img {
 .boton {
   color: black;
   width: 80px;
-  height: 25px;
-  border: solid 1px black;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   background-color: blueviolet;
   border: solid 3px black;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -150,8 +157,9 @@ main {
 }
 .ofertas .ofertasFlex {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .ofertas .ofertasFlex .comprar {
   background-color: white;
@@ -177,7 +185,7 @@ main {
   transform: scale(1.1);
 }
 .ofertas .ofertasFlex .comprar .descuento {
-  background-color: rgb(228, 65, 15);
+  background-color: rgb(230, 23, 23);
   width: 90px;
   height: 90px;
   border-top-right-radius: 45px;
@@ -198,8 +206,6 @@ main {
   background-color: rgb(2, 63, 2);
   color: white;
   width: 200px;
-  height: 35px;
-  border: solid 3px black;
   border-radius: 20px;
   transition: 0.2s;
 }
@@ -230,6 +236,22 @@ main {
   -webkit-animation: marcas 1.1s;
           animation: marcas 1.1s;
 }
+@-webkit-keyframes marcas {
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes marcas {
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
 @media (max-width: 768px) {
   .marcas .grilla-marcas {
     grid-template-rows: repeat(5, auto);
@@ -241,23 +263,6 @@ main {
   }
 }
 
-@-webkit-keyframes marcas {
-  25% {
-    transform: rotate(-20deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-}
-
-@keyframes marcas {
-  25% {
-    transform: rotate(-20deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-}
 .clientes {
   grid-area: clientes;
   display: flex;
@@ -331,24 +336,30 @@ main {
 }
 .nosotros iframe {
   margin: 10px;
+  width: 80%;
 }
 
 .card {
-  text-align: center;
   margin: 15px auto;
 }
+.card h5 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 .card img {
-  width: 95%;
   margin: 10px auto;
+}
+.card p {
+  text-align: center;
 }
 
 /* -------------------------------------------------------CONTACTO */
-form {
+.form-container form {
   width: 350px;
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
 }
-form .row {
+.form-container form .row {
   display: flex;
   justify-content: center;
 }
