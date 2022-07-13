@@ -108,6 +108,7 @@ nav ul li {
 }
 nav ul li:hover {
   background-color: rgb(190, 125, 250);
+  border-radius: 45%;
 }
 
 /*----------------------------------------/HEADER---------------------------------------------*/
@@ -168,7 +169,7 @@ main {
   background-color: white;
   position: relative;
   width: 270px;
-  height: 66vh;
+  height: 400px;
   margin: 20px;
   text-align: center;
   border: solid 2px black;
