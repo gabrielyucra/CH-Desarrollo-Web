@@ -30,26 +30,25 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-li">
-                            <a class="nav-link active " href="../index.html">Inicio</a>
+                            <a class="nav-link active text-light" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="mascotas.html">Mascotas</a>
+                            <a class="nav-link active text-light" aria-current="page" href="mascotas.html">Mascotas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="servicios.html">Servicios</a>
+                            <a class="nav-link active text-light" href="servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="sobreNosotros.html">Sobre Nosotros</a>
+                            <a class="nav-link active text-light" href="sobreNosotros.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                            <a class="nav-link active text-light" href="contacto.html">Contacto</a>
                         </li>
                         <li>
-                            <a class="nav-link active" href="#seguinos">¡Seguinos en nuestras redes!</a>
+                            <a class="nav-link active text-light" href="#seguinos">¡Seguinos en nuestras redes!</a>
                         </li>
                     </ul>
                 </div>
@@ -59,31 +58,30 @@
     </header>
 
     <main>
-        <div class="form-container">
+        <div class="form-container container">
             <form action="#">
                 <h2>Hace tu consulta</h2>
-                <div class="row g-3">
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
-                    <input type="text" class="form-control" placeholder="Celular" aria-label="Last name">
-                    <input type="email" class="form-control" placeholder="example@gmail.com" aria-label="Last name">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Esriba su consulta</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <div class="col-12">
-                    <div class="form-check row">
-                        <label class="form-check-label" for="inlineFormCheck">
-                            Deseo recibir ofertas y promociones
-                        </label>
-                        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Celular" aria-label="phone number">
                     </div>
                 </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary form-button">Enviar</button>
+                <div class="col-sm-12">
+                    <input type="email" class="form-control form-control-lg" id="colFormLabelLg"
+                        placeholder="email@example.com">
+                </div>
+                <div class="form-floating col-12">
+                    <h5>Escriba su consulta</h5>
+                    <textarea id="floatingTextarea"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                </div>
+                <div class="col-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
@@ -108,9 +106,8 @@
                         </a>
                     </div>
             </div>
-            <h5>Copyright 2022 Todo Suelto S.A.</h5>
-    </footer>
+            <p>Copyright 2022 Todo Suelto S.A.</p>
+        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>

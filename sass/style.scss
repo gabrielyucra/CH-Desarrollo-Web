@@ -39,7 +39,7 @@ main{ grid-area: main; }
             background-color:white;
             position: relative;
             width: 270px;
-            height: 392px;
+            height: 66vh;
             margin: 20px;
             text-align: center;
             border: solid 2px black;
@@ -54,14 +54,16 @@ main{ grid-area: main; }
                 transition: all 0.3s;
                 width: 200px;
                 height: 250px;
+                margin: 10px 0;
                 &:hover{
                     transform: scale(1.1);
                 }
             }
             .descuento{
                 background-color: (map-get($colores, "colorOferta"));
-                width: 90px;
-                height: 90px;
+                border: solid black 1px;
+                width: 95px;
+                height: 95px;
                 border-top-right-radius: 45px;
                 border-bottom-right-radius: 45px;
                 border-bottom-left-radius: 35px;
@@ -71,6 +73,7 @@ main{ grid-area: main; }
                 h4{
                     padding-top: 35px; 
                     font-size:medium;
+                    font-weight: 900;
                 }
             }
             p{
@@ -83,7 +86,7 @@ main{ grid-area: main; }
                 color: white;
                 width: 200px;
                 border-radius: 20px;
-                transition: 0.2s;
+                transition: 0.4s;
                 &:hover{
                     transform: scale(1.1);
                     background-color: rgb(13, 128, 3);
@@ -106,12 +109,25 @@ main{ grid-area: main; }
         grid-template-rows: repeat(4, 40vh);
         align-items: center;
 
+        @media (max-width:$phone){
+            grid-template-rows: repeat(5, auto);
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "marcas marcas"
+            "marcas marcas"
+            "marcas marcas"
+            "marcas marcas"
+            "marcas marcas";
+            div{
+                margin: 20px 5px;
+            }
+            }
         div{
             img{
                 width: 150px;
                 height: 150px;
                 border-radius: 50%;
-                .rotate:hover{ animation: marcas 1.1s; }
+                &:hover{ animation: marcas 1.1s; }
             
             @keyframes marcas{
                 25%{
@@ -121,19 +137,6 @@ main{ grid-area: main; }
                     transform: rotate(20deg);
                 }
             } 
-        }
-        }
-    @media (max-width:$phone){
-        grid-template-rows: repeat(5, auto);
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "marcas marcas"
-        "marcas marcas"
-        "marcas marcas"
-        "marcas marcas"
-        "marcas marcas";
-        div{
-            margin: 10px;
         }
         }
     }
@@ -153,7 +156,7 @@ main{ grid-area: main; }
         margin-bottom: 10px;
     }
     div{
-        width: auto;
+        // width: auto;
         h4{
             padding: 20px;
         }
@@ -179,6 +182,9 @@ main{ grid-area: main; }
 .colum {
     display: flex;
     flex-direction: column;
+    @media (max-width: $phone) {
+        text-align: center;
+    }
 
     .servicios {
         position: sticky;
@@ -186,6 +192,7 @@ main{ grid-area: main; }
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        
         li {
             margin: 15px;
         }
@@ -194,10 +201,20 @@ main{ grid-area: main; }
         width: 320px;
         height: 300px;
         padding: 20px;
+        @media (max-width: $phone) {
+            margin-top: 40px;
+        }
     }
     .pSer {
         padding: 10px;
         line-height: 25px;
+    }
+    div{
+        @media(max-width: $phone){
+            iframe{
+                width: 95%;
+            }
+    }
     }
     .hover:hover {
         background-color: black;
@@ -208,7 +225,7 @@ main{ grid-area: main; }
     text-align: center;
     iframe{
         margin: 10px;
-        width: 80%;
+        width: 95%;
     }
 }
 .card{
@@ -228,13 +245,28 @@ main{ grid-area: main; }
 .form-container{
 
     form{
-    width: 350px;
-    margin: 10px auto;
+    // width: 350px;
+
+    margin: 10px 30px;
     text-align: center;
-    .row{
-        display: flex;
-        justify-content: center;
+    input{
+        margin: 5px 0;
+    }
+    @media (max-width: $phone) {
+        .row{
+            flex-direction: column;
+            
+            
+        }
+    }
+    #floatingTextarea{
+        height:100px;
+        width: 100%;
     }
 }
+.container{
+    border: 20px solid black;
+}
+
 }
 /*-------------------------------------------/MAIN---------------------------------------*/

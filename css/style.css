@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .grilla-total {
   display: grid;
   grid-template-columns: 1fr;
@@ -89,7 +93,6 @@ nav ul {
 }
 @media (max-width: 1024px) {
   nav ul {
-    background-color: rgb(228, 15, 210);
     justify-content: space-between;
     align-items: center;
   }
@@ -109,7 +112,7 @@ nav ul li:hover {
 
 /*----------------------------------------/HEADER---------------------------------------------*/
 body {
-  background-image: url("../img/fondo.jpg");
+  background-image: url("../img/vio.jpg");
   background-size: cover;
 }
 
@@ -165,7 +168,7 @@ main {
   background-color: white;
   position: relative;
   width: 270px;
-  height: 392px;
+  height: 66vh;
   margin: 20px;
   text-align: center;
   border: solid 2px black;
@@ -180,14 +183,16 @@ main {
   transition: all 0.3s;
   width: 200px;
   height: 250px;
+  margin: 10px 0;
 }
 .ofertas .ofertasFlex .comprar img:hover {
   transform: scale(1.1);
 }
 .ofertas .ofertasFlex .comprar .descuento {
   background-color: rgb(230, 23, 23);
-  width: 90px;
-  height: 90px;
+  border: solid black 1px;
+  width: 95px;
+  height: 95px;
   border-top-right-radius: 45px;
   border-bottom-right-radius: 45px;
   border-bottom-left-radius: 35px;
@@ -197,6 +202,7 @@ main {
 .ofertas .ofertasFlex .comprar .descuento h4 {
   padding-top: 35px;
   font-size: medium;
+  font-weight: 900;
 }
 .ofertas .ofertasFlex .comprar p {
   color: black;
@@ -207,7 +213,7 @@ main {
   color: white;
   width: 200px;
   border-radius: 20px;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 .ofertas .ofertasFlex .comprar .botonCompra:hover {
   transform: scale(1.1);
@@ -227,12 +233,22 @@ main {
   grid-template-rows: repeat(4, 40vh);
   align-items: center;
 }
+@media (max-width: 768px) {
+  .marcas .grilla-marcas {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas";
+  }
+  .marcas .grilla-marcas div {
+    margin: 20px 5px;
+  }
+}
 .marcas .grilla-marcas div img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
-.marcas .grilla-marcas div img .rotate:hover {
+.marcas .grilla-marcas div img:hover {
   -webkit-animation: marcas 1.1s;
           animation: marcas 1.1s;
 }
@@ -252,16 +268,6 @@ main {
     transform: rotate(20deg);
   }
 }
-@media (max-width: 768px) {
-  .marcas .grilla-marcas {
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas" "marcas marcas";
-  }
-  .marcas .grilla-marcas div {
-    margin: 10px;
-  }
-}
 
 .clientes {
   grid-area: clientes;
@@ -274,9 +280,6 @@ main {
 .clientes h3 {
   text-align: center;
   margin-bottom: 10px;
-}
-.clientes div {
-  width: auto;
 }
 .clientes div h4 {
   padding: 20px;
@@ -306,6 +309,11 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .colum {
+    text-align: center;
+  }
+}
 .colum .servicios {
   position: -webkit-sticky;
   position: sticky;
@@ -322,9 +330,19 @@ main {
   height: 300px;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .colum .imgSer {
+    margin-top: 40px;
+  }
+}
 .colum .pSer {
   padding: 10px;
   line-height: 25px;
+}
+@media (max-width: 768px) {
+  .colum div iframe {
+    width: 95%;
+  }
 }
 .colum .hover:hover {
   background-color: black;
@@ -336,7 +354,7 @@ main {
 }
 .nosotros iframe {
   margin: 10px;
-  width: 80%;
+  width: 95%;
 }
 
 .card {
@@ -355,13 +373,23 @@ main {
 
 /* -------------------------------------------------------CONTACTO */
 .form-container form {
-  width: 350px;
-  margin: 10px auto;
+  margin: 10px 30px;
   text-align: center;
 }
-.form-container form .row {
-  display: flex;
-  justify-content: center;
+.form-container form input {
+  margin: 5px 0;
+}
+@media (max-width: 768px) {
+  .form-container form .row {
+    flex-direction: column;
+  }
+}
+.form-container form #floatingTextarea {
+  height: 100px;
+  width: 100%;
+}
+.form-container .container {
+  border: 20px solid black;
 }
 
 /*-------------------------------------------/MAIN---------------------------------------*//*# sourceMappingURL=style.css.map */

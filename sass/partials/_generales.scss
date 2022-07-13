@@ -16,6 +16,9 @@ a{
     color: beige;
     text-decoration: none;
 }
+p{
+    margin-bottom: 0;
+}
 
 .grilla-total{
     display: grid;
@@ -82,7 +85,6 @@ nav{
         width: 100%;
 
         @media (max-width: $desktop){
-                        background-color: rgb(228, 15, 210);
                         justify-content: space-between;
                         align-items: center;
                     }
@@ -105,7 +107,7 @@ nav{
 /*----------------------------------------/HEADER---------------------------------------------*/
 
 body{
-    background-image: url("../img/fondo.jpg");
+    background-image: url("../img/vio.jpg");
     background-size: cover;
 }
 
