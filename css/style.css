@@ -388,6 +388,7 @@ main {
 .form-container form #floatingTextarea {
   height: 100px;
   width: 100%;
+  color: black;
 }
 .form-container .container {
   border: 20px solid black;
