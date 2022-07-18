@@ -206,13 +206,18 @@ main{ grid-area: main; }
             margin: 10px;
         }
     }
+    .divser{
+        height: 50px;
+    }
     .grilla-servicios{
         display: grid;
         grid-template-columns: 30% 70%;
-        grid-template-rows: auto;
+        grid-template-rows: repeat(2, auto);
         grid-template-areas: 
-        "imagen p";
+        "imagen p"
+        "bts bts";
     }
+    .bts{grid-area: bts;}
     .imgSer {
         grid-area: imagen;
         padding: 20px;

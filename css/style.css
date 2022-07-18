@@ -333,11 +333,17 @@ main {
 .colum .servicios li {
   margin: 10px;
 }
+.colum .divser {
+  height: 50px;
+}
 .colum .grilla-servicios {
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: auto;
-  grid-template-areas: "imagen p";
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "imagen p" "bts bts";
+}
+.colum .bts {
+  grid-area: bts;
 }
 .colum .imgSer {
   grid-area: imagen;
