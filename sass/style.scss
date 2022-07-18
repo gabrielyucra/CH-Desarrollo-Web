@@ -200,9 +200,10 @@ main{ grid-area: main; }
         top: 0;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         margin-bottom: 0;
         background-color: rgb(27, 27, 23);
+        padding: 0;
         li {
             margin: 0 10px;
         }
