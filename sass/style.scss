@@ -5,21 +5,21 @@
 /*---------------------------------------MAIN----------------------------------------------*/
 .grilla-main{
     display: grid;
-    grid-template-columns: 65% 35%;
-    grid-row: repeat(4, auto);
+    grid-template-columns: 60% 40%;
+    grid-row: repeat(5, auto);
     grid-template-areas: 
-    "ofertas ofertas"
-    "marcas clientes"
-    "marcas clientes"
-    "marcas clientes";
+    "marcas  marcas"
+    "ofertas clientes"
+    "ofertas clientes"
+    "ofertas clientes";
     gap: 10px;
 
     @media (max-width: $desktop){
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
-        "ofertas"
         "marcas"
+        "ofertas"
         "clientes";
     }
 }
@@ -31,7 +31,12 @@ main{ grid-area: main; }
     h2{
         text-align: center;
         padding: 15px;
-    }  
+        color:antiquewhite;
+
+    }
+    h6{
+        margin-top: 40px;
+    }
     .ofertasFlex{
         @include flex();
         justify-content: space-evenly;
@@ -101,12 +106,14 @@ main{ grid-area: main; }
     text-align: center;
     h2{
         margin: 20px;
+        color:beige;
+
     }
 
     .grilla-marcas{
         display: grid;
-        grid-template-columns: repeat(3, 33%);
-        grid-template-rows: repeat(4, 40vh);
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(2, 30vh);
         align-items: center;
 
         @media (max-width:$phone){
@@ -154,11 +161,13 @@ main{ grid-area: main; }
     h3{
         text-align: center;
         margin-bottom: 10px;
+        text-decoration: underline rgb(230, 230, 247);
+        color:antiquewhite;
     }
     div{
-        // width: auto;
         h4{
             padding: 20px;
+            color: rgb(190, 121, 255);
         }
         img{
             border: solid 2px;
@@ -194,33 +203,54 @@ main{ grid-area: main; }
         flex-wrap: wrap;
         
         li {
-            margin: 15px;
+            margin: 10px;
         }
     }
+    .grilla-servicios{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "imagen p";
+    }
     .imgSer {
+        grid-area: imagen;
+        padding: 20px;
         width: 320px;
         height: 300px;
-        padding: 20px;
         @media (max-width: $phone) {
             margin-top: 40px;
         }
     }
     .pSer {
-        padding: 10px;
+        grid-area: p;
+        padding: 50px;
         line-height: 25px;
     }
-    div{
-        @media(max-width: $phone){
-            iframe{
-                width: 95%;
-            }
-    }
-    }
+}
     .hover:hover {
         background-color: black;
     }
-}
+
 /* -----------------------------------------------------NOSOTROS */
+.container{
+    h2, h3, h5{
+        margin: 20px 0;
+        color: rgb(253, 255, 108);
+        @media (max-width: $phone){
+            text-align: center;
+        }
+    }
+    img{
+        margin: 30px 0;
+        width: 100%;
+        @media(max-width: $phone) {
+            height: 15vh;
+        }
+        
+    }
+}
+
 .nosotros{
     text-align: center;
     iframe{
@@ -228,25 +258,11 @@ main{ grid-area: main; }
         width: 95%;
     }
 }
-.card{
-    margin: 15px auto;
-    h5{
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    img{
-        margin: 10px auto;
-    }
-    p{
-        text-align: center;
-    }
-}
+
 /* -------------------------------------------------------CONTACTO */
 .form-container{
 
-    form{
-    // width: 350px;
-
+form{
     margin: 10px 30px;
     text-align: center;
     input{

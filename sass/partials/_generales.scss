@@ -86,7 +86,6 @@ nav{
 
         @media (max-width: $desktop){
                         justify-content: space-between;
-                        align-items: center;
                     }
 
         @media (max-width: $phone){
@@ -94,12 +93,14 @@ nav{
                     }
 
         li {
-            margin: 15px 0px;
+            margin: 15px 12px;
             color: blanchedalmond;
 
-            &:hover {
-                background-color: rgb(190, 125, 250);
-                border-radius: 45%;
+            a{
+                &:hover {
+                    background-color: rgb(190, 125, 250);
+                    border-radius: 45%;
+                }
             }
         }
     }
@@ -108,8 +109,9 @@ nav{
 /*----------------------------------------/HEADER---------------------------------------------*/
 
 body{
-    background-image: url("../img/vio.jpg");
-    background-size: cover;
+    // background-image: url("../img/vio.jpg");
+    // background-size: cover;
+    background-color: rgb(27, 27, 23);
 }
 
 /*----------------------------------------FOTER-------------------------------*/

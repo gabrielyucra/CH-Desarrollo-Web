@@ -91,10 +91,9 @@ nav ul {
   border: solid 3px black;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1082px) {
   nav ul {
     justify-content: space-between;
-    align-items: center;
   }
 }
 @media (max-width: 768px) {
@@ -103,18 +102,17 @@ nav ul {
   }
 }
 nav ul li {
-  margin: 15px 0px;
+  margin: 15px 12px;
   color: blanchedalmond;
 }
-nav ul li:hover {
+nav ul li a:hover {
   background-color: rgb(190, 125, 250);
   border-radius: 45%;
 }
 
 /*----------------------------------------/HEADER---------------------------------------------*/
 body {
-  background-image: url("../img/vio.jpg");
-  background-size: cover;
+  background-color: rgb(27, 27, 23);
 }
 
 /*----------------------------------------FOTER-------------------------------*/
@@ -135,16 +133,16 @@ footer div {
 /*---------------------------------------MAIN----------------------------------------------*/
 .grilla-main {
   display: grid;
-  grid-template-columns: 65% 35%;
-  grid-row: repeat(4, auto);
-  grid-template-areas: "ofertas ofertas" "marcas clientes" "marcas clientes" "marcas clientes";
+  grid-template-columns: 60% 40%;
+  grid-row: repeat(5, auto);
+  grid-template-areas: "marcas  marcas" "ofertas clientes" "ofertas clientes" "ofertas clientes";
   gap: 10px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1082px) {
   .grilla-main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "ofertas" "marcas" "clientes";
+    grid-template-areas: "marcas" "ofertas" "clientes";
   }
 }
 
@@ -158,6 +156,10 @@ main {
 .ofertas h2 {
   text-align: center;
   padding: 15px;
+  color: antiquewhite;
+}
+.ofertas h6 {
+  margin-top: 40px;
 }
 .ofertas .ofertasFlex {
   display: flex;
@@ -227,11 +229,12 @@ main {
 }
 .marcas h2 {
   margin: 20px;
+  color: beige;
 }
 .marcas .grilla-marcas {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(4, 40vh);
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(2, 30vh);
   align-items: center;
 }
 @media (max-width: 768px) {
@@ -281,9 +284,13 @@ main {
 .clientes h3 {
   text-align: center;
   margin-bottom: 10px;
+  -webkit-text-decoration: underline rgb(230, 230, 247);
+          text-decoration: underline rgb(230, 230, 247);
+  color: antiquewhite;
 }
 .clientes div h4 {
   padding: 20px;
+  color: rgb(190, 121, 255);
 }
 .clientes div img {
   border: solid 2px;
@@ -324,12 +331,19 @@ main {
   flex-wrap: wrap;
 }
 .colum .servicios li {
-  margin: 15px;
+  margin: 10px;
+}
+.colum .grilla-servicios {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  grid-template-areas: "imagen p";
 }
 .colum .imgSer {
+  grid-area: imagen;
+  padding: 20px;
   width: 320px;
   height: 300px;
-  padding: 20px;
 }
 @media (max-width: 768px) {
   .colum .imgSer {
@@ -337,39 +351,41 @@ main {
   }
 }
 .colum .pSer {
-  padding: 10px;
+  grid-area: p;
+  padding: 50px;
   line-height: 25px;
 }
-@media (max-width: 768px) {
-  .colum div iframe {
-    width: 95%;
-  }
-}
-.colum .hover:hover {
+
+.hover:hover {
   background-color: black;
 }
 
 /* -----------------------------------------------------NOSOTROS */
+.container h2, .container h3, .container h5 {
+  margin: 20px 0;
+  color: rgb(253, 255, 108);
+}
+@media (max-width: 768px) {
+  .container h2, .container h3, .container h5 {
+    text-align: center;
+  }
+}
+.container img {
+  margin: 30px 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .container img {
+    height: 15vh;
+  }
+}
+
 .nosotros {
   text-align: center;
 }
 .nosotros iframe {
   margin: 10px;
   width: 95%;
-}
-
-.card {
-  margin: 15px auto;
-}
-.card h5 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-.card img {
-  margin: 10px auto;
-}
-.card p {
-  text-align: center;
 }
 
 /* -------------------------------------------------------CONTACTO */

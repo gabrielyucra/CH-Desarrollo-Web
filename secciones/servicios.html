@@ -29,26 +29,25 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-li">
-                            <a class="nav-link active text-light" href="../index.html">Inicio</a>
+                            <a class="nav-link active text-light d-inline" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="mascotas.html">Mascotas</a>
+                            <a class="nav-link active text-light d-inline" aria-current="page" href="mascotas.html">Mascotas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" href="servicios.html">Servicios</a>
+                            <a class="nav-link active text-light d-inline" href="servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" href="sobreNosotros.html">Sobre Nosotros</a>
+                            <a class="nav-link active text-light d-inline" href="sobreNosotros.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" href="contacto.html">Contacto</a>
+                            <a class="nav-link active text-light d-inline" href="contacto.html">Contacto</a>
                         </li>
                         <li>
-                            <a class="nav-link active text-light" href="#seguinos">¡Seguinos en nuestras redes!</a>
+                            <a class="nav-link active text-light d-inline" href="#seguinos">¡Seguinos en nuestras redes!</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +55,7 @@
         </nav>
     </header>
 
-    <main class="colum">
+    <main class="colum container">
         <ul class="servicios">
             <li>
                 <a href="#peluqueria">
@@ -74,76 +73,71 @@
                 </a>
             </li>
         </ul>
-        <section>
-            <figure id="peluqueria">
-                <img class="imgSer" src="../img/perruneado.jpg" alt="perruneado"><br>
-            </figure>
+        <section id="peluqueria" class="grilla-servicios">
+            <img class="imgSer" src="../img/perruneado.jpg" alt="perruneado">
             <article class="pSer">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nostrum? Dolorem nostrum,
-                    odit officiis excepturi hic sed aspernatur cupiditate assumenda ad, vo amet.
+                    Tenemos las mejores peluquerías para perros y gatos con los mejores peluqueros de mascotas que
+                    podrás encontrar.
+                </p>
+                <p>
+                    El cuidado del pelo de tu mascota es esencial para mantenerla linda y saludable. Ofrecemos
+                    baños, cortes y peinados que combinan estos dos aspectos fundamentales para el bienestar de tu
+                    mascota.
+                </p>
+                <p>
+                    Priorizamos el bienestar de tu mascota, por eso te invitamos a que hables con nuestro profesional de
+                    peluquería, para que le menciones tus dudas o consejos sobre los cuidados de tu compañero.
+                    Consultá tu sucursal más cercana y cuidá de la apariencia de tu mejor amigo. ¡Solicitá turno!
                 </p>
             </article>
-            <div>
+            <!-- <div>
                 <iframe
                         width="450" height="315" src="https://www.youtube.com/embed/m7-J0vZOS6U"
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
                         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-            </div>
+            </div> -->
         </section>
-        <section>
-            <figure id="veterinaria">
-                <img class="imgSer" src="../img/veterinaria.jpg" alt="perruneado"><br>
-            </figure>
+        <section id="veterinaria" class="grilla-servicios">
+            <img class="imgSer" src="../img/veterinaria.jpg" alt="perruneado"><br>
             <article class="pSer">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nostrum? Dolorem nostrum,
-                    odit officiis excepturi hic sed aspernatur cupiditate assumenda
+                    Desde hace años brindamos la mejor atención veterinaria para tu mascota. Para ello, seleccionamos los mejores profesionales veterinarios, quienes continúan en capacitación y formación constante, para darle la más cálida y profesional atención a tu mascota.
+                </p>
+                <p>
+                    Pensados para la comodidad del paciente y del cliente, nuestros consultorios cumplen con los más altos estándares de calidad para la atención de tu mascota en todas nuestras clínicas veterinarias.
+                </p>
+                <p>
+                    Contamos con los mejores Médicos Veterinarios con formación académica de calidad para ofrecerles las herramientas necesarias para cuidar de tu mascota.
+                    Consultá todas nuestras sucursales de hospitales veterinarios y visítanos para poder ayudarte y ayudar a tu compañero. ¡Solicitá turno!
                 </p>
             </article>
-            <div>
-                <div>
-                    <iframe
-                        width="450" height="315" src="https://www.youtube.com/embed/bSMlGcOrYsk"
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
-                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
+            <!-- <div>
+                <iframe width="450" height="315" src="https://www.youtube.com/embed/bSMlGcOrYsk"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div> -->
         </section>
-        <section>
-            <figure id="adopciones">
-                <img class="imgSer" src="../img/elcampito.jpg" alt="el campito"><br>
-            </figure>
+        <section id="adopciones" class="grilla-servicios">
+            <img class="imgSer" src="../img/elcampito.jpg" alt="el campito"><br>
             <article class="pSer">
                 <p>
-                    El Campito Refugio es una ONG, sin fines de lucro. Estamos inscriptos, como Asociación Civil,
-                    REFUGIO EL CAMPITO personeria juridica n° 6971, Ruta16 Parcela 501 E Monte Grande, Partido de
-                    Esteban Echeverría, zona sur del Gran Buenos Aires, en Argentina. El refugio tiene una población
-                    que ronda los 750 perros. El trabajo de rescate y recuperación NO TIENE PRECEDENTES EN AMERICA
-                    LATINA. Por ser un REFUGIO NO EUTANÁSICO no considera inviable a ninguno de sus animales. Lo que
-                    lo hace ÚNICO EN EL MUNDO son sus 120 perros paraliticos, ellos no pueden caminar y usan
-                    carritos hechos a medida; además viven en el refugio 50 ciegos, y más de 250 viejitos, Muchos de
-                    ellos están en tratamiento por problemas renales, hepáticos, cardíacos, oncológicos o
-                    diabéticos.
-
-                    El Campito no recibe subsidios, aportes de empresas, o alimento balanceado de ninguna compañía,
-                    no tiene cuotas ni socios. Se puede ser padrino / madrina del refugio, o de un perrito que
-                    desees proteger en particular, a voluntad: no hay montos fijos y la frecuencia de la ayuda
-                    también es voluntaria. <b>Para visitar la web</b>
-                    <a href="https://www.elcampitorefugio.org/refugio.php" target="_blank">Click aqui</a>
+                    El Campito Refugio es una ONG, sin fines de lucro. Estamos inscriptos, como Asociación Civil, REFUGIO EL CAMPITO personeria juridica n° 6971, Ruta16 Parcela 501 E Monte Grande, Partido de Esteban Echeverría, zona sur del Gran Buenos Aires, en Argentina.
+                </p>
+                <p>
+                    El objetivo principal de la organización es la concientización de la sociedad. Las ideas que se difunden a través del accionar diario del refugio son las del respeto irrestricto por la vida y la de que el bienestar de los animales se puede lograr si la sociedad se involucra y los sentimientos de piedad se traducen en acciones concretas. Los pilares de esta concientización son: el cuidado adecuado y el no abandono de las mascotas,  la esterilización como único medio de control poblacional, la adopción en lugar de la compra de animales, el rechazo a toda forma de sacrificio o eutanasia. La concientización a la cual apunta El Campito Refugio va más allá del respeto y cuidado hacia a los animales. El objetivo es lograr una sociedad no abandónica y respetuosa, tanto de sus animales, como de sus abuelos como de las personas con capacidades diferentes.
                 </p>
             </article>
-            <div>
-                <div>
+            </p>
+                <!-- <div>
                     <iframe 
                         width="450" height="315" src="https://www.youtube.com/embed/HmDkKZJhkes"
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                         encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
-                </div>
-            </div>
+                </div> -->
         </section>
     </main>
     <footer>
