@@ -299,17 +299,30 @@ main {
 }
 
 /* -----------------------------------------------------MASCOTAS */
-.mascotas {
+.n-integrante {
+  margin: 20px;
+}
+.n-integrante h2 {
+  color: rgb(253, 255, 108);
+}
+
+.n-banner {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.mascotas div {
-  margin: 50px;
-  text-align: center;
+.n-banner img {
+  width: 50%;
+  padding: 10px;
 }
-.mascotas h2 {
-  padding: 20px 0px;
+@media (max-width: 768px) {
+  .n-banner img {
+    width: 100%;
+  }
+}
+
+.mascotas img {
+  margin: 3px;
 }
 
 /* ----------------------------------------------------SERVICIOS */

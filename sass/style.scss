@@ -177,16 +177,31 @@ main{ grid-area: main; }
     }
 }
 /* -----------------------------------------------------MASCOTAS */
-.mascotas{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    div{
-        margin: 50px;
-        text-align: center;
+.n-integrante{
+    margin: 20px;
+    h2{
+        color: rgb(253, 255, 108);
+
     }
-    h2{ padding: 20px 0px; }
 }
+.n-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+        width: 50%;
+        padding: 10px;
+        @media (max-width:$phone) {
+            width: 100%;
+        }
+    }
+}
+.mascotas{
+    img{
+        margin: 3px;
+    }
+}
+
 /* ----------------------------------------------------SERVICIOS */
 .colum {
     display: flex;
