@@ -117,7 +117,7 @@ body {
 
 /*----------------------------------------FOTER-------------------------------*/
 footer {
-  background-color: blueviolet;
+  background-color: rgb(117, 43, 185);
   grid-area: footer;
   text-align: center;
   padding: 5px;
@@ -156,7 +156,7 @@ main {
 .ofertas h2 {
   text-align: center;
   padding: 15px;
-  color: antiquewhite;
+  color: rgb(250, 235, 215);
 }
 .ofertas h6 {
   margin-top: 40px;
@@ -168,7 +168,7 @@ main {
   justify-content: space-evenly;
 }
 .ofertas .ofertasFlex .comprar {
-  background-color: white;
+  background-color: #fff;
   position: relative;
   width: 270px;
   height: 400px;
@@ -179,7 +179,7 @@ main {
 }
 .ofertas .ofertasFlex .comprar h3 {
   font-size: large;
-  color: black;
+  color: #000;
   margin: 10px;
 }
 .ofertas .ofertasFlex .comprar img {
@@ -193,7 +193,7 @@ main {
 }
 .ofertas .ofertasFlex .comprar .descuento {
   background-color: rgb(230, 23, 23);
-  border: solid black 1px;
+  border: solid rgb(0, 0, 0) 1px;
   width: 95px;
   height: 95px;
   border-top-right-radius: 45px;
@@ -208,12 +208,12 @@ main {
   font-weight: 900;
 }
 .ofertas .ofertasFlex .comprar p {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: x-large;
 }
 .ofertas .ofertasFlex .comprar .botonCompra {
   background-color: rgb(2, 63, 2);
-  color: white;
+  color: #fff;
   width: 200px;
   border-radius: 20px;
   transition: 0.4s;
@@ -229,7 +229,7 @@ main {
 }
 .marcas h2 {
   margin: 20px;
-  color: beige;
+  color: rgb(245, 245, 220);
 }
 .marcas .grilla-marcas {
   display: grid;
@@ -284,9 +284,7 @@ main {
 .clientes h3 {
   text-align: center;
   margin-bottom: 10px;
-  -webkit-text-decoration: underline rgb(230, 230, 247);
-          text-decoration: underline rgb(230, 230, 247);
-  color: antiquewhite;
+  color: rgb(250, 235, 215);
 }
 .clientes div h4 {
   padding: 20px;
@@ -376,7 +374,7 @@ main {
 }
 
 .hover:hover {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 /* -----------------------------------------------------------------------------------------------NOSOTROS */
